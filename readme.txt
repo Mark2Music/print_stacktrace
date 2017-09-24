@@ -7,3 +7,4 @@ g++ -g -rdynamic -Wl,-Map=test.map  test.cpp -o test
 addr2line -a 0x0000000000000a53 -e test -f -C
 
 因为程序的调用栈是从main函数来进行计算的，因此这样即可以得到此函数调用的详细信息
+其中最主要的就是可以得到某个函数被调用的位置，在哪个文件哪一行调用的
